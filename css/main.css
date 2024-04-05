@@ -1,0 +1,558 @@
+:root{
+    /* colors */
+    --color-background:#f7f7f7;
+    --color-neutral:#f3f7f8;
+    --color-light-gray: #c2c6c9;
+    --dark-color:#111111;
+
+    /*-----------
+           font
+     */
+    --font-family:"Roboto", sans-serif;
+    --font-size-header: 1.5em;
+    --font-size-normal: 14px;
+    --font-size-big: 50px;
+    --font-size-second-header:1em;
+    --font-size-third-header: 0.9em;
+    --font-weight-bolder: 700;
+    --font-weight-thick: 900;
+    --font-weight-bold: 600;
+
+    /* 
+    ---------------
+        padding 
+    */
+
+    --body-padding: 3%  1%;
+}
+
+/* css resets */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    font-family: var(--font-family);
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* dark overlay */
+.light-dark-overlay{
+    background-image: url('../images/peole-holding-hands.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.light-dark-overlay::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111111ae;
+}
+
+/* header */
+header{
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 20px 60px;
+    color: var(--color-background);
+}
+
+.logo{
+    font-size: var(--font-size-header);
+    font-weight: var(--font-weight-bolder);
+}
+
+.menu-icon{
+    display: none;
+}
+
+header nav{
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+ul li{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-normal);
+    color: var(--color-light-gray);
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+
+li:first-child a{
+    color: var(--color-background);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-background);
+    padding-bottom: 1px;
+}
+
+/*  welcome notes */
+
+.greetings{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    color: var(--color-background);
+}
+
+.greetings h1{
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-thick);
+}
+
+.greetings p{
+    font-size: var(--font-size-big);
+    margin-left: -118px;
+}
+
+.greetings p span{
+    color: var(--color-light-gray);
+    font-weight: 500;
+}
+
+.greetings .social-media{
+    display: flex;
+    gap: 40px;
+    position: relative;
+}
+
+.social-media img{
+    position: absolute;
+    width: 14px;
+    top: 50px;
+}
+
+/* container */
+.container{
+    width: 100%;
+    background-color: var(--color-background);
+    height: 80vh;
+}
+
+.aboutme{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+    margin-top: 50px;
+    background-color: var(--color-background);
+}
+
+.aboutme .textaside{
+    width: 500px;
+    margin-left: 100px;
+}
+
+.textaside h2{
+    font-weight: var(--font-weight-thick);
+}
+
+.textaside span{
+    text-transform: uppercase;
+    font-size: var(--font-size-second-header);
+    padding: 10px 0;
+    color: var(--color-light-gray);
+
+}
+
+    .textaside p{
+        width: auto;
+        margin: 10px auto;
+        font-size: var(--font-size-normal);
+        color: #5b5b5b;
+    }
+
+    .textaside p .bold{
+        font-weight: var(--font-weight-bold);
+        color: var(--dark-color);
+        font-size: inherit;
+    }
+
+.aboutme .image{
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+    margin-top: 100px;
+    background-color: #efefef;
+}
+
+.image img{
+    width: 600px;
+    position: absolute;
+    top: -150px;
+    left: 200px;
+}
+
+/* rating */
+
+.rating{
+    width: 100%;
+    height: 100px;
+  /*   background-color:red; */
+}
+
+.web-rating{
+    border: 2px solid var(--color-light-gray);
+    height: 30px;
+    width: 100%;
+   background-color: rgba(255, 255, 255, 0.248);
+    border-radius: 5px;
+    position: relative;
+    margin: 20px 0;
+    color: var(--color-background);
+}
+
+.value1{
+    border: 2px solid var(--dark-color);
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: var(--dark-color);
+    overflow: none;
+    top: -2px;
+    left: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.communication .value{
+    width: 80%;
+}
+
+.time .value1{
+    width: 80%;
+}
+
+.btns{
+    margin-top: 70px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.btns a{
+    text-decoration: none;
+    background-color: var(--dark-color);
+    padding: 12px 30px;
+    font-size: var(--font-size-normal);
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 3px;
+}
+
+.btns a:first-child{
+    color: var(--color-neutral);
+    transition: all 0.5s ease-in;
+}
+
+.btns a:first-child:hover{
+   background-color: var(--color-background);
+   border: 2px solid var(--dark-color);
+   color: var(--dark-color);
+}
+
+.btns a:nth-child(2){
+    background: var(--color-neutral);
+    color: var(--dark-color);
+    border: 2px solid var(--dark-color);
+    transition: all 0.5s ease-in;
+}
+
+.btns a:nth-child(2):hover{
+    background: var(--dark-color);
+    color: var(--color-neutral);
+}
+
+/* sevices t */
+.services{
+    margin-top: 100px;
+    height: 100vh;
+    background-color: var(--color-background);
+    text-align: center;
+}
+
+.services h2{
+   font-size: var(--font-size-header);
+   font-weight: var(--font-weight-thick);
+   padding: 20px 0;
+}
+
+.services .services-container{
+    display: grid;
+    grid-template-columns: 300px 300px 300px ;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    font-size: var(--font-size-normal);
+}
+
+.web-design{
+    width: 300px;
+    height: auto;
+    background: white;
+    padding: 1em;
+    color: #6b6b6b;
+    position: relative;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 20px;
+}
+
+.web-design .icon{
+    margin-top: 50px;
+    margin-bottom: 7px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 110px;
+}
+
+.web-design h4{
+    padding: 5px -9px;
+    color: var(--dark-color);
+    font-weight: var(--font-weight-bold);
+    
+}
+
+.web-design p{
+    letter-spacing: 0.1px;
+}
+
+.close{
+    display: none;
+    transition: all 0.5s ease-in;
+}
+
+footer{
+    height: 130px;
+    position: relative;
+    bottom: -905px;
+    width: 100%;
+    background-color: #111111;
+    text-align: center;
+    color: #c2c6c9;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer a{
+   font-size: 10px;
+    color: #c2c6c9;
+}
+
+.support{
+    padding: 5px 0;
+}
+
+/* screen 375px */
+
+@media screen and (max-width: 375px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        width: 100%;
+    }
+
+    header{
+        position: relative;
+    }
+
+    .menu-icon{
+        width: 45px;
+        height: 34px;
+       display: block; 
+       background-color: #efefef;
+        padding: 7px;
+        text-align: center;
+        position: absolute;
+        top: -98vh;
+        cursor: pointer;
+        left: 260px;
+    }
+
+    .menu-icon img, .close-menu img{
+        width: 30px;
+        height: 20px;
+    }
+
+    .close{
+        display: none;
+        transition: all 0.5s ease-in;
+    }
+
+    .open{
+        display: block;
+    }
+
+    .menu-icon img svg path{
+        color: #c2c6c9;
+    }
+    
+    header nav{
+        /* display: none; */
+        background-color: /* #c2c6c9 */ #111111;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: -105vh;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        z-index: 9999;
+    }
+
+    nav ul{
+        display: grid;
+       padding-top: 30px;
+       margin-left: -50px;
+    }
+
+    nav{
+        display: none;
+    }
+    
+    .logo, .close-menu{
+        position: absolute;
+        top: -98vh;
+        left: -20px;
+    }
+
+    .close-menu{
+        left: -50px;
+        width: 45px;
+        height: 34px;
+        background: #efefef;
+        padding: 5px;
+        text-align: center;
+        z-index: 9999;
+    }
+
+    .close-menu img{
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .menu-icon, .close-menu{
+        border-radius: 4px;
+    }
+
+    .greetings{
+        left: 0;
+        top: 250px;
+        padding-left: 10px;
+    }
+
+    .greetings h1, .greetings p{
+        font-size: 40px;
+    }
+
+    .greetings p{
+        margin-left: 0;
+        word-spacing: 0.1px;
+    }
+
+    .greetings .social-media{
+        left: 140px;
+        margin-top: 50px;
+    }
+
+    .aboutme {
+        display: grid;
+        grid-template-rows: 250px;
+        row-gap: 30px;
+        margin-bottom: 100px;
+    }
+
+   .aboutme .image{
+       /*  display: none; */
+       width: 300px;
+       height: 40vh;
+       margin: 0;
+       margin-top: 100px;
+    }
+
+    .image img{
+        width: 300px;
+        left: 60px;
+    }
+
+    .aboutme .textaside{
+        width: 300px;
+        margin: 0;
+        margin-top: -125px;
+    }
+
+    .services .services-container{
+        display: grid;
+        grid-template-columns: 300px; 
+        position: relative;
+        margin-left: 40px;
+    }
+
+    .services .services-container h2{
+        position: relative;
+    
+    }
+
+    .btns a:first-child{
+        padding: 0 25px;
+        /* background-color: red; */
+    }
+
+    .btns a:nth-child(2){
+        /* background-color: red; */
+        text-align: center;
+        padding: 0 25px;
+    }
+
+    .services{
+        margin-top: 300px;
+        position: relative;
+        z-index: 9999999;
+    }
+}
